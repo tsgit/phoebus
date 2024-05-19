@@ -100,7 +100,6 @@ public class AlarmMessageLogger implements Runnable {
                         return record.timestamp();
                     }
                 }));
-
         alarms = alarms.filter((k, v) -> {
             return v != null;
         });
@@ -181,7 +180,6 @@ public class AlarmMessageLogger implements Runnable {
                         };
                     }
                 });
-
         KStream<String, AlarmStateMessage> filteredAlarms = transformedAlarms.filter((k, v) -> {
             return v != null ? v.isLeaf() : false;
         });

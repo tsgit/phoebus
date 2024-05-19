@@ -8,7 +8,7 @@
   <properties>
     <java.version>1.11</java.version>
     <spring.boot-version>2.7.3</spring.boot-version>
-    <elasticsearch.version>8.2.0</elasticsearch.version>
+    <elasticsearch.version>8.12.0</elasticsearch.version>
   </properties>
   <artifactId>service-alarm-logger</artifactId>
 

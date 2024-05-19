@@ -247,7 +247,7 @@ public class ElasticClientHelper {
                     logger.log(Level.SEVERE, "failed to create the alarm log indices ", e);
                 }
             }
-            if (stateMessagedQueue.size() + configMessagedQueue.size() > 0) {
+            if (stateMessagedQueue.size() + configMessagedQueue.size() + commandMessagedQueue.size() > 0) {
                 logger.log(Level.INFO, "batch execution of : " + stateMessagedQueue.size() + " state messages and " + configMessagedQueue.size() + " config messages");
                 BulkRequest.Builder bulkRequest = new BulkRequest.Builder().refresh(Refresh.True);
                 Collection<SimpleImmutableEntry<String, AlarmStateMessage>> statePairs = new ArrayList<>();

@@ -253,8 +253,8 @@ public class AlarmLoggingService {
         try {
             threadPoolSize = Integer.valueOf(properties.getProperty("thread_pool_size"));
         } catch (NumberFormatException e) {
-            logger.info("Specified thread pool size is not a number, will default to 4");
-            threadPoolSize = 4;
+            logger.info("Specified thread pool size is not a number, will default to 8");
+            threadPoolSize = 8;
         }
         Scheduler = Executors.newScheduledThreadPool(threadPoolSize);
 
